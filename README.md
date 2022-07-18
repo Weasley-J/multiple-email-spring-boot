@@ -1,6 +1,7 @@
 # multiple-email-spring-boot-starter
 
-
+[![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/mojohaus/templating-maven-plugin.svg?label=License)](http://www.apache.org/licenses/)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.weasley-j/multiple-email-spring-boot-starter)](https://search.maven.org/artifact/io.github.weasley-j/multiple-email-spring-boot-starter)
 
 本项目已提交至maven中央仓库，你可以直接在项目`pom.xml`中引入使用, 找个[最新版](https://search.maven.org/search?q=multiple-email-spring-boot-starter)引入坐标即可:
 
