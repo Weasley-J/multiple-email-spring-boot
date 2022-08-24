@@ -11,7 +11,7 @@
 
     <groupId>io.github.weasley-j</groupId>
     <artifactId>multiple-email-spring-boot-starter</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <name>multiple-email-spring-boot-starter</name>
     <description>Multi-template email sending support, 多模板邮件发送支持.</description>
     <url>https://github.com/Weasley-J/multiple-email-spring-boot</url>
@@ -41,7 +41,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-cloud-context.version>3.1.3</spring-cloud-context.version>
         <hutool-all.version>5.8.4</hutool-all.version>
         <javax.mail.version>1.5.0-b01</javax.mail.version>
         <nexus-staging.version>1.6.13</nexus-staging.version>
@@ -102,12 +101,6 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool-all.version}</version>
-        </dependency>
-        <!--spring cloud context-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-context</artifactId>
-            <version>${spring-cloud-context.version}</version>
         </dependency>
         <!--javax.mail-->
         <dependency>

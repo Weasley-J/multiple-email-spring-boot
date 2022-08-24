@@ -11,7 +11,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -40,7 +39,6 @@ import static cn.alphahub.multiple.email.config.EmailConfig.EmailThreadPoolPrope
  * @date 2021-09-06
  */
 @Slf4j
-@RefreshScope
 @Configuration(proxyBeanMethods = false)
 @ConfigurationPropertiesScan({"cn.alphahub.multiple.email.config"})
 @EnableConfigurationProperties({MailProperties.class, EmailProperties.class, EmailTemplateProperties.class, EmailThreadPoolProperties.class})
