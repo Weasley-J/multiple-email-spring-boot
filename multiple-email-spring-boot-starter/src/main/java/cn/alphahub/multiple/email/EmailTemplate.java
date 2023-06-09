@@ -3,6 +3,11 @@ package cn.alphahub.multiple.email;
 import cn.alphahub.multiple.email.aspect.EmailAspect;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.json.JSONUtil;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,13 +29,7 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import javax.validation.Valid;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import java.io.File;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -38,6 +37,8 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
+
+;
 
 /**
  * 邮件模板方法默认实现
@@ -121,7 +122,7 @@ public class EmailTemplate {
         try {
             CompletableFuture.allOf(sendResponseFuture).get();
         } catch (InterruptedException | ExecutionException e) {
-            log.error("{},{}", JSONUtil.toJsonStr(domain), e.getMessage(), e);
+            log.error("发送给定的简单邮件消息失败 {},{}", JSONUtil.toJsonStr(domain), e.getMessage(), e);
             Thread.currentThread().interrupt();
         }
     }
@@ -160,7 +161,7 @@ public class EmailTemplate {
         try {
             CompletableFuture.allOf(sendResponseFuture).get();
         } catch (InterruptedException | ExecutionException e) {
-            log.error("{},{}", JSONUtil.toJsonStr(domain), e.getMessage(), e);
+            log.error("发送带附件的邮件 {},{}", JSONUtil.toJsonStr(domain), e.getMessage(), e);
             Thread.currentThread().interrupt();
         }
     }
@@ -172,8 +173,7 @@ public class EmailTemplate {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class SimpleMailMessageDomain implements Serializable {
-        private static final long serialVersionUID = 1L;
+    public static class SimpleMailMessageDomain {
         /**
          * 收件人的邮箱
          */
@@ -208,8 +208,7 @@ public class EmailTemplate {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class MimeMessageDomain implements Serializable {
-        private static final long serialVersionUID = 1L;
+    public static class MimeMessageDomain {
         /**
          * 收件人的邮箱
          */

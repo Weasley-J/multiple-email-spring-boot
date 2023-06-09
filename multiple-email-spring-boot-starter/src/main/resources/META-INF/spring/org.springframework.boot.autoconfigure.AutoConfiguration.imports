@@ -1,0 +1,3 @@
+  cn.alphahub.multiple.email.config.EmailConfig
+  cn.alphahub.multiple.email.aspect.EmailAspect
+  cn.alphahub.multiple.email.EmailTemplate

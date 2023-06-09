@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.1</version>
+        <version>3.1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>io.github.weasley-j</groupId>
     <artifactId>multiple-email-spring-boot-starter</artifactId>
-    <version>1.0.8</version>
+    <version>3.0.0</version>
     <name>multiple-email-spring-boot-starter</name>
     <description>Multi-template email sending support, 多模板邮件发送支持.</description>
     <url>https://github.com/Weasley-J/multiple-email-spring-boot</url>
@@ -41,8 +41,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <hutool-all.version>5.8.4</hutool-all.version>
-        <javax.mail.version>1.5.0-b01</javax.mail.version>
+        <hutool-all.version>5.8.18</hutool-all.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
         <nexus-staging.version>1.6.13</nexus-staging.version>
         <maven-javadoc.version>3.4.0</maven-javadoc.version>
         <maven-gpg.version>3.0.1</maven-gpg.version>
@@ -101,12 +101,6 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool-all.version}</version>
-        </dependency>
-        <!--javax.mail-->
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>${javax.mail.version}</version>
         </dependency>
     </dependencies>
 
