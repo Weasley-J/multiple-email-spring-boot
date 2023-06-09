@@ -41,7 +41,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <hutool-all.version>5.8.4</hutool-all.version>
+        <hutool-all.version>5.8.18</hutool-all.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
         <javax.mail.version>1.5.0-b01</javax.mail.version>
         <nexus-staging.version>1.6.13</nexus-staging.version>
         <maven-javadoc.version>3.4.0</maven-javadoc.version>
