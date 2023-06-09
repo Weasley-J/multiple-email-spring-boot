@@ -11,7 +11,7 @@
 
     <groupId>io.github.weasley-j</groupId>
     <artifactId>multiple-email-spring-boot-starter</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <name>multiple-email-spring-boot-starter</name>
     <description>Multi-template email sending support, 多模板邮件发送支持.</description>
     <url>https://github.com/Weasley-J/multiple-email-spring-boot</url>
